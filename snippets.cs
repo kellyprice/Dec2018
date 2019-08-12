@@ -22,3 +22,7 @@ if (Url.IsLocalUrl(returnurl) && returnurl.Length > 1 && returnurl.StartsWith("/
 }
 
 return RedirectToAction("Index", "Home");
+
+
+string json = new WebClient().DownloadString("http://localhost:60853/api/getdataapi/GetTestItems");
+var items = JsonConvert.DeserializeObject<List<TestItem>>(json);
