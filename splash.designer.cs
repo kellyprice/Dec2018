@@ -31,14 +31,13 @@ namespace FAB
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splash));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblWarning = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblVersion = new System.Windows.Forms.Label();
             this.lblApplicationTitle = new System.Windows.Forms.Label();
             this.lblCopyright = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -48,8 +47,7 @@ namespace FAB
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblWarning);
             this.panel1.Controls.Add(this.PictureBox1);
             this.panel1.Controls.Add(this.lblVersion);
             this.panel1.Controls.Add(this.lblApplicationTitle);
@@ -59,6 +57,17 @@ namespace FAB
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 600);
             this.panel1.TabIndex = 3;
+            // 
+            // lblWarning
+            // 
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarning.Location = new System.Drawing.Point(20, 186);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(104, 16);
+            this.lblWarning.TabIndex = 13;
+            this.lblWarning.Text = "warning text";
+            this.lblWarning.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // PictureBox1
             // 
@@ -124,28 +133,6 @@ namespace FAB
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label1.Location = new System.Drawing.Point(260, 201);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "WARNING!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label2.Location = new System.Drawing.Point(119, 238);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 17);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "warning text";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // Splash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,7 +169,21 @@ namespace FAB
         internal System.Windows.Forms.Label lblApplicationTitle;
         internal System.Windows.Forms.Label lblCopyright;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblWarning;
     }
 }
+
+private void AddWarning()
+        {
+            lblWarning.Text = "*********************************************************************\r\n";
+            lblWarning.Text += "*                                                                   *\r\n";
+            lblWarning.Text += "*                          WARNING    ! ! !                         *\r\n";
+            lblWarning.Text += "*                                                                   *\r\n";
+            lblWarning.Text += "*   Unauthorized access to this system is forbidden and will be     *\r\n";
+            lblWarning.Text += "*                                                                   *\r\n";
+            lblWarning.Text += "*  prosecuted by law. By accessing this system, you agree that your *\r\n";
+            lblWarning.Text += "*                                                                   *\r\n";
+            lblWarning.Text += "*   actions may be monitored if unauthorized usage is suspected.    *\r\n";
+            lblWarning.Text += "*                                                                   *\r\n";
+            lblWarning.Text += "*********************************************************************";
+        }
