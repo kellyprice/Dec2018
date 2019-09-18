@@ -31,6 +31,10 @@ namespace FAB
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LoginAdmin = new System.Windows.Forms.Button();
+            this.LoginApprover = new System.Windows.Forms.Button();
+            this.LoginViewer = new System.Windows.Forms.Button();
+            this.LoginInput = new System.Windows.Forms.Button();
             this.lblWarning = new System.Windows.Forms.Label();
             this.llblChangeEnviron = new System.Windows.Forms.LinkLabel();
             this.ddnEnvironment = new System.Windows.Forms.ComboBox();
@@ -39,10 +43,6 @@ namespace FAB
             this.Cancel = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -52,10 +52,10 @@ namespace FAB
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.LoginAdmin);
+            this.panel1.Controls.Add(this.LoginApprover);
+            this.panel1.Controls.Add(this.LoginViewer);
+            this.panel1.Controls.Add(this.LoginInput);
             this.panel1.Controls.Add(this.lblWarning);
             this.panel1.Controls.Add(this.llblChangeEnviron);
             this.panel1.Controls.Add(this.ddnEnvironment);
@@ -67,6 +67,66 @@ namespace FAB
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 600);
             this.panel1.TabIndex = 4;
+            // 
+            // LoginAdmin
+            // 
+            this.LoginAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(91)))));
+            this.LoginAdmin.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.LoginAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginAdmin.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginAdmin.ForeColor = System.Drawing.Color.White;
+            this.LoginAdmin.Location = new System.Drawing.Point(301, 529);
+            this.LoginAdmin.Name = "LoginAdmin";
+            this.LoginAdmin.Size = new System.Drawing.Size(111, 23);
+            this.LoginAdmin.TabIndex = 28;
+            this.LoginAdmin.Text = "Login as Admin";
+            this.LoginAdmin.UseVisualStyleBackColor = false;
+            this.LoginAdmin.Click += new System.EventHandler(this.LoginAdmin_Click);
+            // 
+            // LoginApprover
+            // 
+            this.LoginApprover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(91)))));
+            this.LoginApprover.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.LoginApprover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginApprover.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginApprover.ForeColor = System.Drawing.Color.White;
+            this.LoginApprover.Location = new System.Drawing.Point(301, 500);
+            this.LoginApprover.Name = "LoginApprover";
+            this.LoginApprover.Size = new System.Drawing.Size(111, 23);
+            this.LoginApprover.TabIndex = 27;
+            this.LoginApprover.Text = "Login as Approver";
+            this.LoginApprover.UseVisualStyleBackColor = false;
+            this.LoginApprover.Click += new System.EventHandler(this.LoginApprover_Click);
+            // 
+            // LoginViewer
+            // 
+            this.LoginViewer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(91)))));
+            this.LoginViewer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.LoginViewer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginViewer.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginViewer.ForeColor = System.Drawing.Color.White;
+            this.LoginViewer.Location = new System.Drawing.Point(174, 529);
+            this.LoginViewer.Name = "LoginViewer";
+            this.LoginViewer.Size = new System.Drawing.Size(111, 23);
+            this.LoginViewer.TabIndex = 26;
+            this.LoginViewer.Text = "Login as Viewer";
+            this.LoginViewer.UseVisualStyleBackColor = false;
+            this.LoginViewer.Click += new System.EventHandler(this.LoginViewer_Click);
+            // 
+            // LoginInput
+            // 
+            this.LoginInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(91)))));
+            this.LoginInput.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.LoginInput.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginInput.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginInput.ForeColor = System.Drawing.Color.White;
+            this.LoginInput.Location = new System.Drawing.Point(174, 500);
+            this.LoginInput.Name = "LoginInput";
+            this.LoginInput.Size = new System.Drawing.Size(111, 23);
+            this.LoginInput.TabIndex = 25;
+            this.LoginInput.Text = "Login as Input";
+            this.LoginInput.UseVisualStyleBackColor = false;
+            this.LoginInput.Click += new System.EventHandler(this.LoginInput_Click);
             // 
             // lblWarning
             // 
@@ -161,62 +221,6 @@ namespace FAB
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(91)))));
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(181, 500);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Login as Input";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(91)))));
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(181, 529);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Login as Viewer";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(91)))));
-            this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(308, 500);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 23);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Login as Viewer";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(48)))), ((int)(((byte)(91)))));
-            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(308, 529);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 23);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Login as Viewer";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,9 +259,9 @@ namespace FAB
         private System.Windows.Forms.ComboBox ddnEnvironment;
         private System.Windows.Forms.LinkLabel llblChangeEnviron;
         private System.Windows.Forms.Label lblWarning;
-        internal System.Windows.Forms.Button button4;
-        internal System.Windows.Forms.Button button3;
-        internal System.Windows.Forms.Button button2;
-        internal System.Windows.Forms.Button button1;
+        internal System.Windows.Forms.Button LoginAdmin;
+        internal System.Windows.Forms.Button LoginApprover;
+        internal System.Windows.Forms.Button LoginViewer;
+        internal System.Windows.Forms.Button LoginInput;
     }
 }
